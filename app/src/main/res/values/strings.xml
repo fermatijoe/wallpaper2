@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Wallhouse</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="API_key">68300e070409b2fe66caf7b80bdb4502</string>
+
+    <string name="nav_newest">Newest</string>
+</resources>

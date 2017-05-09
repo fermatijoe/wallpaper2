@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:orientation="vertical"
+             android:layout_width="match_parent"
+             android:layout_height="250dp"
+             tools:background="@android:color/holo_green_light"
+             android:clickable="true"
+             android:focusable="true"
+             android:background="?android:attr/selectableItemBackground">
+
+    <TextView
+        android:id="@+id/grid_item_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="15sp"
+        android:padding="5dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:ellipsize="end"
+        android:textColor="@android:color/white" />
+
+
+    <ImageView
+        android:windowSharedElementsUseOverlay="false"
+        android:transitionName="wallpaper_transition"
+        android:id="@+id/grid_item_image"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+
+</FrameLayout>
