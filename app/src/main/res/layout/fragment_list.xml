@@ -6,15 +6,17 @@
 
 
     <android.support.v7.widget.RecyclerView
+        android:overScrollMode="never"
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         xmlns:android="http://schemas.android.com/apk/res/android"/>
 
     <TextView
-        android:visibility="gone"
+        android:textSize="48sp"
         android:textColor="@android:color/white"
         android:id="@+id/empty_view"
+        android:visibility="gone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
@@ -26,5 +28,6 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_gravity="center"/>
+
 
 </FrameLayout>

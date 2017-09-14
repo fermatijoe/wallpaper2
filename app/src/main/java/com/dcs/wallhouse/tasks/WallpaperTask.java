@@ -42,7 +42,7 @@ public class WallpaperTask extends AsyncTask<String, Void, List<Wallpaper>> {
                             && !image.getString("category").equals("Video Game")
                             && !image.getString("category").equals("Women")
                             && !image.getString("category").equals("TV Show")) {
-                        String res = image.getString("width") + "*" + image.getString("height");
+                        String res = image.getString("width") + "x" + image.getString("height");
                         Wallpaper wallpaper = new Wallpaper(
                                 image.getString("id"),
                                 image.getString("url_image"),
@@ -72,15 +72,21 @@ public class WallpaperTask extends AsyncTask<String, Void, List<Wallpaper>> {
     }
 
 
-    //params 0 is method (newest, hig_rating, search, category)
+    //params 0 is method (newest, hig_rating, search, category, earthSat)
     //params 1 is page to load (first page automatically shown has n.1)
-    //params 2 is whether the displayed list of walls should be replaced with this query UNUSED
+    //params 2 is whether the displayed list of walls should be replaced with this query
+    //params 3 is category name
     @Override
     protected List<Wallpaper> doInBackground(String... params) {
-        if (params[0] == null) {
-            Log.e(LOG_TAG, "Id passed in was null");
-            return null;
+        if(params.length == 4){
+            Log.v(LOG_TAG, "WallPpaperTAsk loaded with\n" + "params0: " + params[0]
+                    +"\nparams3: " + params[3]
+                    +"\nparams1: " + params[1]
+                    +"\nparams2: " + params[2]);
+        }else {
+            Log.v(LOG_TAG, "params lenght is: " + params.length);
         }
+
 
         HttpURLConnection urlConnection = null;
         BufferedReader reader = null;
@@ -90,14 +96,42 @@ public class WallpaperTask extends AsyncTask<String, Void, List<Wallpaper>> {
             final String BASE_URL =
                     "https://wall.alphacoders.com/api2.0/get.php?auth=68300e070409b2fe66caf7b80bdb4502";
 
-            Uri builtUri = Uri.parse(BASE_URL).buildUpon()
-                    .appendQueryParameter("method", params[0])
-                    .appendQueryParameter("info_level", "2")
-                    .appendQueryParameter("width", "3000") //limits for quicker loading
-                    .appendQueryParameter("height", "3000") //limits for quicker loading
-                    .appendQueryParameter("operator", "max") //limits for quicker loading
-                    .appendQueryParameter("page", params[1])
-                    .build();
+            Uri builtUri;
+            if(params[2] == null) {
+
+                if(params[0].equals("category")){
+                    builtUri = Uri.parse(BASE_URL).buildUpon()
+                            .appendQueryParameter("method", params[0])
+                            .appendQueryParameter("info_level", "2")
+                            .appendQueryParameter("width", "3000") //limits for quicker loading
+                            .appendQueryParameter("height", "3000") //limits for quicker loading
+                            .appendQueryParameter("operator", "max") //limits for quicker loading
+                            .appendQueryParameter("page", params[1])
+                            .appendQueryParameter("id", params[3]) //id of category
+                            .build();
+                }else{
+                    builtUri = Uri.parse(BASE_URL).buildUpon()
+                            .appendQueryParameter("method", params[0])
+                            .appendQueryParameter("info_level", "2")
+                            .appendQueryParameter("width", "3000") //limits for quicker loading
+                            .appendQueryParameter("height", "3000") //limits for quicker loading
+                            .appendQueryParameter("operator", "max") //limits for quicker loading
+                            .appendQueryParameter("page", params[1])
+                            .build();
+                }
+            }else {
+                builtUri = Uri.parse(BASE_URL).buildUpon()
+                        .appendQueryParameter("method", params[0])
+                        .appendQueryParameter("info_level", "2")
+                        .appendQueryParameter("width", "3000") //limits for quicker loading
+                        .appendQueryParameter("height", "3000") //limits for quicker loading
+                        .appendQueryParameter("operator", "max") //limits for quicker loading
+                        .appendQueryParameter("page", params[1])
+                        .appendQueryParameter("term", params[2]) //query
+                        .build();
+            }
+
+
             URL url = new URL(builtUri.toString());
             Log.v(LOG_TAG, "built url: " + url);
 

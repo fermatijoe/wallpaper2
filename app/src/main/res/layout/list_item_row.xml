@@ -22,8 +22,6 @@
 
 
     <ImageView
-        android:windowSharedElementsUseOverlay="false"
-        android:transitionName="wallpaper_transition"
         android:id="@+id/grid_item_image"
         android:layout_gravity="center"
         android:layout_width="match_parent"

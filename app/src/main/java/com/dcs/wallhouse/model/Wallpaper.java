@@ -1,20 +1,25 @@
 package com.dcs.wallhouse.model;
 
-public class Wallpaper {
-    private String mId;
+import com.orm.SugarRecord;
+
+public class Wallpaper extends SugarRecord<Wallpaper> {
+    private String mWallId;
     private String mUrl;
     private String mPreview;
     private String mResolution;
 
-    public Wallpaper(String id, String url, String preview, String resolution){
-        mId = id;
+    public Wallpaper(){}
+
+
+    public Wallpaper(String wallid, String url, String preview, String resolution){
+        mWallId = wallid;
         mUrl = url;
         mPreview = preview;
         mResolution = resolution;
     }
 
-    public String getId() {
-        return mId;
+    public String getWallId() {
+        return mWallId;
     }
 
     public String getUrl() {
@@ -23,5 +28,9 @@ public class Wallpaper {
 
     public String getPreview() {
         return mPreview;
+    }
+
+    public String getResolution() {
+        return mResolution;
     }
 }

@@ -9,4 +9,45 @@
     <string name="API_key">68300e070409b2fe66caf7b80bdb4502</string>
 
     <string name="nav_newest">Newest</string>
+    <string name="top_rated">Top rated</string>
+    <string name="Earth_by_satellite">Earth by satellite</string>
+    <string name="Favorites">Favorites</string>
+    <string name="Popular">Popular</string>
+
+    <string name="DOWNLOAD">DOWNLOAD</string>
+    <string name="SET_AS">SET AS</string>
+    <string name="FAVORITE">FAVORITE</string>
+    <string name="About">About</string>
+
+
+    <string-array name="sports_array">
+        <item>Shuttle Badminton</item>
+        <item>Tennis</item>
+        <item>FootBall</item>
+        <item>Basket Ball</item>
+        <item>Table Tennis</item>
+        <item>Chess</item>
+        <item>Hockey</item>
+    </string-array>
+
+
+    <string name="Categories">Categories</string>
+    <string name="Abstract">Abstract</string>
+    <string name="Animal">Animal</string>
+    <string name="Anime">Anime</string>
+    <string name="Comics">Comics</string>
+    <string name="Earth">Earth</string>
+    <string name="Fantasy">Fantasy</string>
+    <string name="Man_Made">Man Made</string>
+    <string name="Movie">Movie</string>
+    <string name="Music">Music</string>
+    <string name="Photography">Photography</string>
+    <string name="Sci_Fi">Sci Fi</string>
+    <string name="Space">Space</string>
+    <string name="TV_Show">TV Show</string>
+    <string name="Vehicles">Vehicles</string>
+    <string name="Video_Game">Video Game</string>
+
+
+
 </resources>

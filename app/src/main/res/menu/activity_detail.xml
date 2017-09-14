@@ -5,6 +5,12 @@
         android:id="@+id/action_share"
         android:orderInCategory="100"
         android:icon="@drawable/ic_share_black_24dp"
-        android:title="Menu"
+        android:title="Share"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/action_info"
+        android:orderInCategory="200"
+        android:icon="@drawable/ic_info_black_24dp"
+        android:title="Info"
         app:showAsAction="always"/>
 </menu>
