@@ -19,7 +19,7 @@
         tools:replace="android:icon"
         android:name="com.orm.SugarApp">
 
-        <meta-data android:name="DATABASE" android:value="mydatabase.db" />
+        <meta-data android:name="DATABASE" android:value="mydatabasenew.db" />
         <meta-data android:name="VERSION" android:value="2" />
         <meta-data android:name="QUERY_LOG" android:value="true" />
         

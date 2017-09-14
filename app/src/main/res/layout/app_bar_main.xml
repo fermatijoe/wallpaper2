@@ -47,6 +47,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
+        <!--
         <com.google.android.gms.ads.AdView
             android:layout_gravity="bottom"
             xmlns:ads="http://schemas.android.com/apk/res-auto"
@@ -57,6 +58,7 @@
             android:layout_alignParentBottom="true"
             ads:adSize="BANNER"
             ads:adUnitId="ca-app-pub-9909155562202230/8345537038"/>
+            -->
     </RelativeLayout>
 
 

@@ -25,9 +25,6 @@ import android.widget.Toast;
 
 import com.dcs.wallhouse.utils.ExpandListAdapter;
 import com.dcs.wallhouse.utils.FavouriteUtils;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.MobileAds;
 import com.miguelcatalan.materialsearchview.MaterialSearchView;
 import com.mikepenz.materialdrawer.AccountHeader;
 import com.mikepenz.materialdrawer.AccountHeaderBuilder;
@@ -148,10 +145,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        /*
         MobileAds.initialize(this, "ca-app-pub-9909155562202230~1041762089");
         AdView mAdView = (AdView) findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
+        */
 
 
 
